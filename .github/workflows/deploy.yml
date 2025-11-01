@@ -3,7 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main   # run only when main branch is updated (e.g., after merge)
+      - main
+
+permissions:
+  contents: write    # ✅ allow pushing to gh-pages branch
 
 jobs:
   build-and-deploy:
